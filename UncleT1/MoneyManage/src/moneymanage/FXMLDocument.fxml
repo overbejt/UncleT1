@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="950.0" prefHeight="450.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView prefHeight="200.0" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn prefWidth="75.0" text="CLASS" />
-          <TableColumn prefWidth="75.0" text="ADDRESS" />
-            <TableColumn prefWidth="75.0" text="MEASUREMENT" />
-            <TableColumn prefWidth="75.0" text="QUANTITY" />
+          <TableColumn minWidth="120.0" prefWidth="210.0" text="ADDRESS" />
+            <TableColumn minWidth="120.0" prefWidth="120.0" text="MEASUREMENT" />
+            <TableColumn minWidth="120.0" prefWidth="120.0" text="QUANTITY" />
             <TableColumn prefWidth="75.0" text="RATE" />
-            <TableColumn prefWidth="75.0" text="TOTAL AMOUNT" />
+            <TableColumn minWidth="150.0" prefWidth="150.0" text="TOTAL AMOUNT" />
         </columns>
       </TableView>
    </center>
@@ -26,12 +31,9 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
+                  <MenuItem mnemonicParsing="false" text="Export To Spreadsheet" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
               <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
@@ -42,4 +44,21 @@
         </menus>
       </MenuBar>
    </top>
+   <right>
+      <VBox minWidth="200.0" prefHeight="421.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox prefHeight="26.0" prefWidth="90.0" promptText="Class" />
+            <TextField promptText="Address" />
+            <Label text="Measurements (Length): " />
+            <TextField prefHeight="26.0" prefWidth="71.0" promptText="Feet" />
+            <TextField prefHeight="26.0" prefWidth="85.0" promptText="Inches" />
+            <Label text="Measurements (Width):" />
+            <TextField promptText="Feet" />
+            <TextField promptText="Inches" />
+            <TextField promptText="Quantity" />
+            <TextField promptText="Rate" />
+            <Button mnemonicParsing="false" text="Add" />
+         </children>
+      </VBox>
+   </right>
 </BorderPane>
