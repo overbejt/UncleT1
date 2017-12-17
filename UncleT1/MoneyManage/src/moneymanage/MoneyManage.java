@@ -36,4 +36,10 @@ public class MoneyManage extends Application {
         launch(args);
     }
     
+    @Override
+    public void stop(){
+        System.out.println("Stage is closing");
+        // Save file
+    }//Maybe
+    
 }
