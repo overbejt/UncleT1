@@ -42,4 +42,4 @@ public class MoneyManage extends Application {
         // Save file
     }//Maybe
     
-}
+}//End of the 'MoneyManage' class

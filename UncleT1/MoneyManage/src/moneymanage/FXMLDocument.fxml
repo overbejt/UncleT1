@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="950.0" prefHeight="450.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="950.0" prefHeight="450.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moneymanage.FXMLDocumentController">
    <center>
       <TableView prefHeight="200.0" BorderPane.alignment="CENTER">
         <columns>
@@ -48,12 +48,12 @@
    <right>
       <VBox minWidth="200.0" prefHeight="421.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <ComboBox prefHeight="26.0" prefWidth="90.0" promptText="Class">
+            <ComboBox fx:id="comboBx" onAction="#handleComboBox" prefHeight="26.0" prefWidth="90.0" promptText="Class">
                <VBox.margin>
                   <Insets bottom="2.0" left="5.0" right="5.0" top="4.0" />
                </VBox.margin>
             </ComboBox>
-            <TextField promptText="Address">
+            <TextField fx:id="addressField" promptText="Address">
                <VBox.margin>
                   <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
                </VBox.margin>
@@ -63,12 +63,12 @@
                   <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
                </VBox.margin>
             </Label>
-            <TextField prefHeight="26.0" prefWidth="71.0" promptText="Feet">
+            <TextField fx:id="lengthFtFld" prefHeight="26.0" prefWidth="71.0" promptText="Feet">
                <VBox.margin>
                   <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
                </VBox.margin>
             </TextField>
-            <TextField prefHeight="26.0" prefWidth="85.0" promptText="Inches">
+            <TextField fx:id="lengthInFld" prefHeight="26.0" prefWidth="85.0" promptText="Inches">
                <VBox.margin>
                   <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
                </VBox.margin>
@@ -78,27 +78,27 @@
                   <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
                </VBox.margin>
             </Label>
-            <TextField promptText="Feet">
+            <TextField fx:id="widthFtFld" promptText="Feet">
                <VBox.margin>
                   <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="Inches">
+            <TextField fx:id="widthInFld" promptText="Inches">
                <VBox.margin>
                   <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="Quantity">
+            <TextField fx:id="quantityFld" promptText="Quantity">
                <VBox.margin>
                   <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
                </VBox.margin>
             </TextField>
-            <TextField promptText="Rate">
+            <TextField fx:id="rateFld" promptText="Rate">
                <VBox.margin>
                   <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
                </VBox.margin>
             </TextField>
-            <Button mnemonicParsing="false" text="Add">
+            <Button fx:id="addBtn" mnemonicParsing="false" onAction="#handleAddBtn" text="Add">
                <VBox.margin>
                   <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
                </VBox.margin>
